@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "717165601645",
+    "firebase_url": "https://budget-it-414dd-default-rtdb.firebaseio.com",
+    "project_id": "budget-it-414dd",
+    "storage_bucket": "budget-it-414dd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717165601645:android:8c2054d167d9b9a33eb064",
+        "android_client_info": {
+          "package_name": "com.cc102.budgetit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAayX59uVkWu21bWSF-1U6ZyfXghhST-lk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717165601645:android:170d77708ded31c33eb064",
+        "android_client_info": {
+          "package_name": "com.example.connecttofirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAayX59uVkWu21bWSF-1U6ZyfXghhST-lk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
