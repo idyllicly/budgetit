@@ -30,7 +30,7 @@
         android:id="@+id/tvSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have an account? Sign Up"
         android:layout_gravity="center"
-        android:paddingTop="16dp" />
+        android:paddingTop="16dp"
+        android:text="Don't have an account? Sign Up" />
 </LinearLayout>

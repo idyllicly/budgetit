@@ -53,11 +53,4 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
 
-    // Add the MPAndroidChart dependency (via the correct alias or direct dependency)
-    implementation(libs.mpandroidchart)  // Ensure this is using the correct format
-
-    // Testing dependencies
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
 }
