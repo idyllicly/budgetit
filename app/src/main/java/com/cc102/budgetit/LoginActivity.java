@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.cc102.budgetit.ui.SignUpActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
@@ -78,8 +79,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void navigateToSignUp() {
-        // Redirect to a Sign-Up screen (to be implemented in the next step).
-        // Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
-        // startActivity(intent);
+        Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+        startActivity(intent);
+        finish();
     }
+
 }

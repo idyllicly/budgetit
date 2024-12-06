@@ -48,9 +48,15 @@ dependencies {
     implementation(libs.firebase.database)
     implementation(libs.firebase.auth)
     implementation(libs.activity)
+    implementation(libs.recyclerview)
+    implementation(libs.support.annotations)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation(libs.drawerlayout)
+    implementation(libs.material)
+    implementation (libs.androidx.navigation.fragment.ktx)
+    implementation (libs.navigation.ui.ktx)
 
 
 }

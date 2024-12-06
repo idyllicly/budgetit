@@ -1,60 +1,32 @@
 package com.cc102.budgetit.ui.notifications;
 
 import android.os.Bundle;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
 import com.cc102.budgetit.R;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-
-import com.cc102.budgetit.databinding.FragmentExpenseSummaryBinding;
 import com.cc102.budgetit.ui.notifications.CustomPieChartView;
-import java.util.ArrayList;
 
 public class ExpenseSummaryFragment extends Fragment {
 
-    private FragmentExpenseSummaryBinding binding;
-    private CustomPieChartView pieChartView;
+    private CustomPieChartView customPieChartView;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        NotificationsViewModel notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
-
-        binding = FragmentExpenseSummaryBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-
-        // Initialize PieChartView
-        pieChartView = binding.getRoot().findViewById(R.id.customPieChartView);
-
-        // Set the pie chart data
-        setPieChartData();
-
-        return root;
-    }
-
-    private void setPieChartData() {
-        // Sample data for the pie chart
-        ArrayList<CustomPieChartView.PieSlice> slices = new ArrayList<>();
-        slices.add(new CustomPieChartView.PieSlice(30f, getResources().getColor(android.R.color.holo_red_dark)));
-        slices.add(new CustomPieChartView.PieSlice(40f, getResources().getColor(android.R.color.holo_blue_dark)));
-        slices.add(new CustomPieChartView.PieSlice(20f, getResources().getColor(android.R.color.holo_green_dark)));
-        slices.add(new CustomPieChartView.PieSlice(10f, getResources().getColor(android.R.color.holo_orange_dark)));
-
-        // Set the data for the PieChartView
-        pieChartView.setPieChartData(slices);
+    public ExpenseSummaryFragment() {
+        // Required empty public constructor
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View rootView = inflater.inflate(R.layout.fragment_expense_summary, container, false);
+
+        // Initialize PieChart
+        customPieChartView = rootView.findViewById(R.id.customPieChartView);
+
+        // TODO: Update PieChart with data
+
+        return rootView;
     }
 }
