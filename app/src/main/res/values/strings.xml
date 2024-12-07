@@ -8,4 +8,6 @@
     <string name="expense_overview_fragment">Expense Overview Fragment</string>
     <string name="expenses_overview">Expenses Overview</string>
     <string name="add_expense_title">Add Expense</string>
+    <string name="nav_open">opem</string>
+    <string name="nav_close">closm</string>
 </resources>

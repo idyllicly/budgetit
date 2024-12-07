@@ -15,8 +15,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText etEmail, etPassword;
-    private Button btnLogin;
+    private EditText etEmail, etPassword, editTextText, editTextTextPassword;
+    private Button btnLogin, button, button2;
     private TextView tvSignUp;
     private FirebaseAuth auth;
 
@@ -24,12 +24,19 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+//        setContentView(R.layout.activity_new_login);
 
         // Initialize UI elements
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         tvSignUp = findViewById(R.id.tvSignUp);
+
+        //my edit
+//        etEmail = findViewById(R.id.editTextText);
+//        etPassword = findViewById(R.id.editTextTextPassword);
+//        btnLogin = findViewById(R.id.button);
+//        tvSignUp = findViewById(R.id.button2);
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance();
@@ -43,7 +50,11 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(v -> loginUser());
 
         // Sign up text click listener
-        tvSignUp.setOnClickListener(v -> navigateToSignUp());
+        tvSignUp.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+            startActivity(intent);
+        });
+
     }
 
     private void loginUser() {

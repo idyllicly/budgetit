@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9e7148"
-    android:foregroundTint="#9D673A">
+    android:foregroundTint="#9D673A"
+    android:visibility="visible"
+    tools:visibility="visible">
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -33,6 +35,7 @@
         android:layout_marginTop="360dp"
         android:layout_marginEnd="125dp"
         android:layout_marginBottom="410dp"
+        android:autofillHints=""
         android:backgroundTint="#FFFBFB"
         android:ems="10"
         android:inputType="text"
@@ -160,5 +163,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
